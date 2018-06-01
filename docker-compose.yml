@@ -1,0 +1,12 @@
+version: '3'
+services:
+  web:
+    container_name: ghost-theme-dev
+    restart: always
+    image: ghost:1-alpine
+    ports:
+      - "3000:2368"
+    volumes:
+      - './content/:/var/lib/ghost/content'
+
+
